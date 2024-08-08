@@ -1,0 +1,166 @@
+/* reset css */
+@import url(reset.css);
+
+/* Root Variables */
+:root {
+  --color-dark-cyan: hsl(158, 36%, 37%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-very-dark-blue: hsl(212, 21%, 14%);
+  --color-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/* styling body */
+body {
+  background-color: var(--color-cream);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5em;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 35%;
+  height: 300px;
+  align-self: center;
+  font-size: 0.875rem;
+
+  /* display: flex;
+  flex-direction: row; */
+}
+h1,
+h3 {
+  line-height: 1;
+}
+
+.picture {
+  height: auto;
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+
+.textsection {
+  display: flex;
+  flex-direction: column;
+  padding: 1.3em;
+  font-size: 0.875rem;
+  background-color: white;
+  min-height: auto;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+.textsection p {
+  font-weight: 100;
+  font-size: 0.875rem;
+}
+.textsection h1 {
+  font-weight: 900;
+  padding: 0.5em 0;
+  font-size: 1.5rem;
+}
+.textsection h3 {
+  font-weight: 400;
+  font-size: 0.675rem;
+}
+.perfume {
+  color: rgba(0, 0, 0, 0.35);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+  display: flex;
+  flex-direction: row;
+  gap: 0.9em;
+}
+span h1 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-dark-cyan);
+}
+span span {
+  align-self: center;
+  font-size: 0.7rem;
+}
+
+button h3 {
+  align-self: flex-end;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  justify-content: center;
+  background-color: var(--color-dark-cyan);
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-very-dark-blue);
+}
+
+/* .......................for mobile interface ....................... */
+@media screen and (max-width: 700px) {
+  body {
+    padding: 20% 0;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    align-self: center;
+  }
+
+  .picture {
+    overflow: hidden;
+    width: 100%;
+    height: 30vh;
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+  .picture img {
+    min-height: 50vh;
+    width: 100%;
+    margin-top: -50px;
+  }
+  .textsection {
+    border-radius: 0 0 0.8rem 0.8rem;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1150px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40%;
+    height: 300px;
+    align-self: center;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+
+    /* display: flex;
+  flex-direction: row; */
+  }
+}
+@media screen and (min-width: 703px) and (max-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    height: 300px;
+    align-self: center;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+
+    /* display: flex;
+  flex-direction: row; */
+  }
+}
